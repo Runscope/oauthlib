@@ -24,7 +24,7 @@ signedtoken_require = ['cryptography', 'pyjwt>=1.0.0']
 signals_require = ['blinker']
 
 setup(
-    name='oauthlib',
+    name='runscope-oauthlib',
     version=oauthlib.__version__,
     description='A generic, spec-compliant, thorough implementation of the OAuth request-signing logic',
     long_description=fread('README.rst'),

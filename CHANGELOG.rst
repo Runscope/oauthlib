@@ -1,5 +1,12 @@
 Changelog
 =========
+3.1.0.post1 (2024-10-03)
+------------------
+OAuth2.0 Provider:
+
+* Took a fork of oauthlib to fix a use case where token is not coming in `access_token` but in `accessToken` variable.
+
+* TT-4334: Update token response validation to allow tokens in `accessToken` variable.
 
 3.1.0 (TBD)
 ------------------

@@ -437,8 +437,11 @@ def validate_token_parameters(params):
     if 'error' in params:
         raise_from_error(params.get('error'), params)
 
-    if not 'access_token' in params:
-        raise MissingTokenError(description="Missing access token parameter.")
+    if 'access_token' not in params:
+        if 'accessToken' in params:
+            params['access_token'] = params['accessToken']
+        else:
+            raise MissingTokenError(description="Missing access token parameter.")
 
     if not 'token_type' in params:
         if os.environ.get('OAUTHLIB_STRICT_TOKEN_TYPE'):
