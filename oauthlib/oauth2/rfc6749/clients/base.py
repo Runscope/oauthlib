@@ -579,6 +579,8 @@ class Client:
 
         if 'access_token' in response:
             self.access_token = response.get('access_token')
+        elif 'accessToken' in response:
+            self.access_token = response.get('accessToken')
 
         if 'refresh_token' in response:
             self.refresh_token = response.get('refresh_token')
